@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/587/587377.png">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/5ec0bdbf3c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="savedMenu">
+        <i class="fa-solid fa-floppy-disk"></i>
+        <p>Saved</p>
+    </div>
+    <div class="settingsDiv">
+        <div class="lineWidthDiv">
+            <p>Line width</p>
+            <input id="widthInp" value="5" type="range" min="1" max="20" step="1">
+            <p id="lineWidthText">5</p>
+        </div>
+        <div class="canvasStyleDiv">
+            <p>Canvas color</p>
+            <input type="color" value="#fff555" class="colorSelectBtn" id="customColorSelectCanvas">
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="header">
+            <div class="currentColorDiv">
+                <div class="currentColor">
+                    <div class="currentColorDisplay"></div>
+                </div>
+                <div class="lineWidth">
+                    <div id="lineWidthDisplay" class="lineWidthDisplay"></div>
+                </div>
+            </div>
+            <div class="toolBtnDiv">
+                <div id="save" class="toolSelectButton modeAction">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                </div>
+                <div id="paintBrush" class="toolSelectButton modeTool selected">
+                    <i class="fa-solid fa-paintbrush"></i>
+                </div>
+                <div id="erase" class="toolSelectButton modeTool">
+                    <i class="fa-solid fa-eraser"></i>
+                </div>
+                <div id="delete" class="toolSelectButton modeAction">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+            <div class="settingDiv">
+                <div id="settingBtn" class="settingBtn">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+            </div>
+        </div>
+        <div class="colorMenu">
+            <div class="menuClickFalse">
+                <i class="fa-solid fa-brush"></i>
+            </div>
+            <div class="menuClickTrue">
+                <div class="colorSelectDiv">
+                    <div class="colorSelectBtn" id="red"></div>
+                    <div class="colorSelectBtn" id="cyan"></div>
+                    <div class="colorSelectBtn" id="green"></div>
+                    <div class="colorSelectBtn" id="yellow"></div>
+                    <div class="colorSelectBtn" id="blue"></div>
+                    <input type="color" value="#fff555" class="colorSelectBtn" id="customColorSelect">
+                </div>
+            </div>
+        </div>
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
